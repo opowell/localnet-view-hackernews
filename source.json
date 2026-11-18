@@ -1,0 +1,7 @@
+{
+  "name": "Hacker News views",
+  "views": [
+    { "name": "Hacker News", "kind": "listing", "hint": "Numbered rows of points and comments", "template": "listing.html", "style": "listing.css" },
+    { "name": "Hacker News", "kind": "content", "hint": "Verdana on beige, comments indented", "template": "content.html", "style": "content.css" }
+  ]
+}

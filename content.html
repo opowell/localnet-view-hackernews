@@ -1,0 +1,16 @@
+<div class="hn-head">
+  <span class="vote" aria-hidden="true"></span>
+  <div>
+    <span class="titleline">
+      <a class="title" href="{{ item.url || item.page }}">{{ item.title }}</a>
+      <span data-if="item.site" class="site">({{ item.site }})</span>
+    </span>
+    <span class="subtext">
+      <span data-if="item.points">{{ item.points }} points</span>
+      <span data-if="item.author">by {{ item.author }}</span>
+      <span data-if="item.ago">{{ item.ago }}</span>
+      <span data-if="item.comments" class="sep">{{ item.comments }} comments</span>
+      <span data-if="item.length" class="sep">{{ item.length }}</span>
+    </span>
+  </div>
+</div>

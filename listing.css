@@ -1,0 +1,130 @@
+/* Hacker News: Verdana at ten points on beige, an orange bar, grey for what has been read. */
+& {
+  --hn-bg: #1d1d1a;
+  --hn-fg: #e4e4dc;
+  --hn-dim: #8f8f86;
+  --hn-orange: #ff6600;
+  --hn-bar-fg: #000;
+  min-height: 100%;
+  padding: 8px 0 24px;
+  background: var(--hn-bg);
+  color: var(--hn-fg);
+  font: 10pt Verdana, Geneva, sans-serif;
+}
+
+:root[data-theme='light'] & {
+  --hn-bg: #f6f6ef;
+  --hn-fg: #000;
+  --hn-dim: #828282;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme='dark']) & {
+    --hn-bg: #f6f6ef;
+    --hn-fg: #000;
+    --hn-dim: #828282;
+  }
+}
+
+.hn {
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px;
+  background: var(--hn-orange);
+  color: var(--hn-bar-fg);
+}
+
+.mark {
+  display: inline-grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #fff;
+  color: #fff;
+  font-weight: bold;
+}
+
+.count {
+  margin-left: auto;
+  padding-right: 4px;
+}
+
+.count::after {
+  content: ' results';
+}
+
+.items {
+  margin: 0;
+  padding: 10px 0 0;
+  list-style: none;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 2.6em 14px 1fr;
+  align-items: start;
+  margin-bottom: 5px;
+}
+
+.rank {
+  padding-right: 4px;
+  color: var(--hn-dim);
+  text-align: right;
+}
+
+.vote {
+  justify-self: center;
+  margin-top: 4px;
+  border: 5px solid transparent;
+  border-top-width: 0;
+  border-bottom: 8px solid var(--hn-dim);
+}
+
+.titleline {
+  display: block;
+}
+
+.title {
+  color: var(--hn-fg);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.read .title {
+  color: var(--hn-dim);
+}
+
+.site,
+.site a {
+  color: var(--hn-dim);
+  font-size: 8pt;
+  text-decoration: none;
+}
+
+.site a:hover {
+  text-decoration: underline;
+}
+
+.subtext {
+  display: block;
+  color: var(--hn-dim);
+  font-size: 7pt;
+}
+
+.subtext > span + span {
+  margin-left: 4px;
+}
+
+.sep::before {
+  content: '| ';
+}
+
+.sep:first-child::before {
+  content: none;
+}

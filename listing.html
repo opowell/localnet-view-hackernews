@@ -1,0 +1,23 @@
+<div class="hn">
+  <div class="bar"><span class="mark">Y</span><b>{{ rows.0.type || 'Results' }}</b><span class="count">{{ count }}</span></div>
+  <ol class="items">
+    <li data-for="row in rows" class="item" data-class-read="row.read">
+      <span class="rank">{{ row.rank }}.</span>
+      <span class="vote" aria-hidden="true"></span>
+      <div class="body">
+        <span class="titleline">
+          <a class="title" data-open="row">{{ row.title }}</a>
+          <span data-if="row.site" class="site">(<a href="{{ row.url }}">{{ row.site }}</a>)</span>
+        </span>
+        <span class="subtext">
+          <span data-if="row.points">{{ row.points }} points</span>
+          <span data-if="row.author">by <span class="user">{{ row.author }}</span></span>
+          <span data-if="row.ago">{{ row.ago }}</span>
+          <span data-if="row.comments" class="sep">{{ row.comments }} comments</span>
+          <span data-if="row.discussions" class="sep">{{ row.discussions }} discussions</span>
+          <span data-if="row.saved" class="sep">saved</span>
+        </span>
+      </div>
+    </li>
+  </ol>
+</div>

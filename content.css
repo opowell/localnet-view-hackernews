@@ -1,0 +1,157 @@
+/* Hacker News: Verdana on beige; a comment's head small and grey, its replies set in 40px under it. */
+& {
+  --hn-bg: #1d1d1a;
+  --hn-fg: #e4e4dc;
+  --hn-dim: #8f8f86;
+  --hn-link: #e4e4dc;
+}
+
+:root[data-theme='light'] & {
+  --hn-bg: #f6f6ef;
+  --hn-fg: #000;
+  --hn-dim: #828282;
+  --hn-link: #000;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme='dark']) & {
+    --hn-bg: #f6f6ef;
+    --hn-fg: #000;
+    --hn-dim: #828282;
+    --hn-link: #000;
+  }
+}
+
+.reader-viewport {
+  background: var(--hn-bg);
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+.reader-flow {
+  padding: 0 8px;
+}
+
+.reader-flow p,
+.reader-flow li,
+.reader-quote,
+.reader-item {
+  color: var(--hn-fg);
+  font-size: 9pt;
+  line-height: 1.45;
+}
+
+.reader-flow h2,
+.reader-flow h3,
+.reader-flow h4 {
+  color: var(--hn-fg);
+  font-family: inherit;
+  font-size: 10pt;
+}
+
+.reader-flow a,
+.reader-link {
+  color: var(--hn-link);
+  text-decoration: underline;
+}
+
+.hn-head {
+  display: grid;
+  grid-template-columns: 14px 1fr;
+  gap: 2px;
+  padding: 8px 0 14px;
+}
+
+.hn-head .vote {
+  align-self: start;
+  justify-self: center;
+  margin-top: 5px;
+  border: 5px solid transparent;
+  border-top-width: 0;
+  border-bottom: 8px solid var(--hn-dim);
+}
+
+.hn-head .titleline {
+  display: block;
+}
+
+.hn-head .title {
+  color: var(--hn-fg);
+  font-size: 10pt;
+  text-decoration: none;
+}
+
+.hn-head .site,
+.hn-head .subtext {
+  color: var(--hn-dim);
+  font-size: 8pt;
+}
+
+.hn-head .subtext {
+  display: block;
+}
+
+.hn-head .subtext > span + span {
+  margin-left: 4px;
+}
+
+.hn-head .sep::before {
+  content: '| ';
+}
+
+.hn-head .sep:first-child::before {
+  content: none;
+}
+
+.sep:first-child::before {
+  content: none;
+}
+
+.reader-comments-head {
+  border-top: 0;
+}
+
+.reader-comments-head .reader-heading {
+  color: var(--hn-dim);
+  font-size: 8pt;
+  font-weight: normal;
+}
+
+.reader-comment {
+  margin-top: 1em;
+}
+
+.reader-comment-head {
+  color: var(--hn-dim);
+  font-size: 8pt;
+}
+
+.reader-comment-author,
+.reader-comment-fold,
+.reader-comment-meta,
+.reader-comment-time {
+  color: var(--hn-dim);
+  font-weight: normal;
+}
+
+.reader-comment-meta::before {
+  content: '';
+  margin: 0;
+}
+
+.reader-comment p,
+.reader-comment h4 {
+  color: var(--hn-fg);
+  font-size: 9pt;
+  line-height: 1.4;
+}
+
+.reader-comment-replies {
+  margin-left: 0;
+  padding-left: 40px;
+  border-left: 0;
+}
+
+.reader-comment-op {
+  background: none;
+  color: var(--hn-dim);
+}
