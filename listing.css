@@ -1,10 +1,8 @@
-/* Hacker News: Verdana at ten points on beige, an orange bar, grey for what has been read. */
+/* Hacker News: Verdana at ten points on beige, grey for what has been read. */
 & {
   --hn-bg: #1d1d1a;
   --hn-fg: #e4e4dc;
   --hn-dim: #8f8f86;
-  --hn-orange: #ff6600;
-  --hn-bar-fg: #000;
   min-height: 100%;
   padding: 8px 0 24px;
   background: var(--hn-bg);
@@ -31,37 +29,9 @@
   margin: 0 auto;
 }
 
-.bar {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 2px;
-  background: var(--hn-orange);
-  color: var(--hn-bar-fg);
-}
-
-.mark {
-  display: inline-grid;
-  place-items: center;
-  width: 18px;
-  height: 18px;
-  border: 1px solid #fff;
-  color: #fff;
-  font-weight: bold;
-}
-
-.count {
-  margin-left: auto;
-  padding-right: 4px;
-}
-
-.count::after {
-  content: ' results';
-}
-
 .items {
   margin: 0;
-  padding: 10px 0 0;
+  padding: 0;
   list-style: none;
 }
 
